@@ -15,27 +15,27 @@ body {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	background-color: #333;
+	background-color: $pure-black;
 }
 
 .header-section {
 	position: relative;
 	width: 500px;
-	height: 250px;
+	height: 200px;
 	@include heroImg("../img/footwear-1838767_1920.jpg");
 
 	&__title {
 		position: absolute;
-		margin: 5px 5px;
+		margin: 10px 10px;
 		color: $light-white;
 	}
 
 	&__input {
 		position: absolute;
 		height: 15%;
-		width: 80%;
-		bottom: 5%;
-		left: 10%;
+		width: 90%;
+		bottom: 10%;
+		left: 5%;
 		padding: 10px;
 		border: 1.5px solid $pure-black;
 		border-radius: 8px;
@@ -45,7 +45,28 @@ body {
 }
 
 .main-section {
+	position: relative;
 	width: 500px;
 	height: 500px;
-	background-color: red;
+	background-color: $light-white;
+
+	&__tittle {
+		position: absolute;
+		font-size: 32px;
+		margin: 5px 5px;
+		color: $pure-black;
+	}
+
+	&__ullist {
+		position: absolute;
+		font-size: 20px;
+		padding: 50px 30px;
+		color: $pure-black;
+		list-style: none;
+
+		li {
+			padding: 10px;
+			border-bottom: 1px solid rgb(226, 226, 226);
+		}
+	}
 }
