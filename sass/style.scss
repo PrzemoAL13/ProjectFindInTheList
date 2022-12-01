@@ -19,9 +19,29 @@ body {
 }
 
 .header-section {
+	position: relative;
 	width: 500px;
 	height: 250px;
 	@include heroImg("../img/footwear-1838767_1920.jpg");
+
+	&__title {
+		position: absolute;
+		margin: 5px 5px;
+		color: $light-white;
+	}
+
+	&__input {
+		position: absolute;
+		height: 15%;
+		width: 80%;
+		bottom: 5%;
+		left: 10%;
+		padding: 10px;
+		border: 1.5px solid $pure-black;
+		border-radius: 8px;
+		font-size: medium;
+		background-color: $light-white;
+	}
 }
 
 .main-section {
