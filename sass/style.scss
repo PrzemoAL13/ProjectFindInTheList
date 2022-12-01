@@ -1,3 +1,6 @@
+@import "./colors";
+@import "./mixins";
+
 *,
 *::before,
 *::after {
@@ -6,14 +9,23 @@
 	padding: 0;
 }
 
+body {
+	margin: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background-color: #333;
+}
+
 .header-section {
-	width: 600px;
-	height: 300px;
-	background-color: blue;
+	width: 500px;
+	height: 250px;
+	@include heroImg("../img/footwear-1838767_1920.jpg");
 }
 
 .main-section {
-	width: 600px;
-	height: 600px;
+	width: 500px;
+	height: 500px;
 	background-color: red;
 }

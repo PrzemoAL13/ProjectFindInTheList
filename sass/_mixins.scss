@@ -1,0 +1,5 @@
+@mixin heroImg($heroImg) {
+	background-image: $light-gray-brown-gradient, url($heroImg);
+	background-position: center;
+	background-size: cover;
+}
