@@ -15,19 +15,20 @@ body {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	background-color: $pure-black;
+	background-color: rgb(211, 209, 209);
 }
 
 .header-section {
 	position: relative;
 	width: 500px;
 	height: 200px;
+	box-shadow: 2px 0px 5px $light-gray;
 	@include heroImg("../img/footwear-1838767_1920.jpg");
 
 	&__title {
 		position: absolute;
 		margin: 10px 10px;
-		color: $light-white;
+		color: $pure-brown;
 	}
 
 	&__input {
@@ -40,33 +41,42 @@ body {
 		border: 1.5px solid $pure-black;
 		border-radius: 8px;
 		font-size: medium;
-		background-color: $light-white;
+		color: $dark-brown;
+		background-color: $white-transparent;
 	}
 }
 
 .main-section {
 	position: relative;
 	width: 500px;
-	height: 500px;
+	height: 480px;
 	background-color: $light-white;
+	box-shadow: 2px 2px 5px $light-gray;
 
 	&__tittle {
 		position: absolute;
+		width: 100%;
 		font-size: 32px;
-		margin: 5px 5px;
-		color: $pure-black;
+		padding: 1% 5%;
+		color: $pure-brown;
 	}
 
 	&__ullist {
 		position: absolute;
+		height: 438px;
+		width: 100%;
+		top: 42px;
 		font-size: 20px;
-		padding: 50px 30px;
-		color: $pure-black;
+		color: $pure-brown;
 		list-style: none;
 
 		li {
 			padding: 10px;
-			border-bottom: 1px solid rgb(226, 226, 226);
+			border-bottom: 1px solid $dark-brown;
+		}
+
+		li:last-child {
+			border-bottom: 0px solid $pure-brown;
 		}
 	}
 }
