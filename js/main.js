@@ -16,7 +16,7 @@ const prepereDOMElements = () => {
 
 const prepereDOMEvent = () => {
 	//listeners
-	inValue.addEventListener("keyup", checkEnterBtn);
+	//	inValue.addEventListener("keyup", checkEnterBtn);
 	inValue.addEventListener("keyup", searchText);
 };
 
@@ -27,14 +27,19 @@ const checkEnterBtn = e => {
 };
 
 const searchText = e => {
-	console.log("keyup");
-	//console.log(e.target);
-	console.log(e.target.value);
-	//console.log(inValue.value);
-	compareInputValue();
+	const searchTextValue = e.target.value;
+	compareInputValue(searchTextValue);
 };
 
-const compareInputValue = () => {};
+const compareInputValue = textValue => {
+	liList.forEach(el => {
+		if (el.textContent.indexOf(textValue) != -1) {
+			el.style.display = "block";
+		} else {
+			el.style.display = "none";
+		}
+	});
+};
 
 //after DOM Loaded
 document.addEventListener("DOMContentLoaded", main);
