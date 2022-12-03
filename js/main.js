@@ -27,13 +27,13 @@ const checkEnterBtn = e => {
 };
 
 const searchText = e => {
-	const searchTextValue = e.target.value;
+	const searchTextValue = e.target.value.toLowerCase();
 	compareInputValue(searchTextValue);
 };
 
 const compareInputValue = textValue => {
 	liList.forEach(el => {
-		if (el.textContent.indexOf(textValue) != -1) {
+		if (el.textContent.toLowerCase().indexOf(textValue) != -1) {
 			el.style.display = "block";
 		} else {
 			el.style.display = "none";
